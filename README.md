@@ -19,7 +19,7 @@ Examples of how to use this dictionary to create CBOR data structures that repre
 * [CBOR-IF-MAP TNC Base](https://github.com/decoit/cbor-if-map-tnc-base)
 * [CBOR-IF-MAP SIMU Extensions](https://github.com/decoit/cbor-if-map-simu-extensions)
 
-The library was developed during the [SIMU research](http://www.simu-project.de) project.
+The library was developed during the [SIMU research project](http://www.simu-project.de).
 
 ### Description language
 Dictionaries for usage with this library are defined by using a simple plain text description language. It allows both flat and hierarchical dictionaries at the same time, meaning you are free to build your dictionary structure the way your application can use it best. However some conventions must be followed to successfully import the dictionary into this library. Most of them are common sense since XML does not allow most those cases either.
