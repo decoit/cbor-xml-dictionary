@@ -1,0 +1,10 @@
+n'http://www.trustedcomputinggroup.org/2010/IFMAP/2'[uint(1)] {
+	t'access-request'[uint(0)] {
+		a'name'[uint(0)] {
+			e'enumVal1'[uint(0)]
+			e'enumVal2'[uint(1)]
+		}
+		a'administrative-domain'[uint(1)] {}
+	}
+	t'publish'[uint(1)] {}
+}

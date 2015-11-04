@@ -1,0 +1,13 @@
+n'http://www.trustedcomputinggroup.org/2010/IFMAP/2'[uint(1)] {
+	t'access-request'[uint(0)] {
+		a'name'[uint(0)] {
+			e'enumVal1'[uint(0)]
+			e'enumVal2'[uint(1)]
+		}
+		t'nested-element'[uint(0)] {
+			a'nested-element-attribute'[uint(0)] {}
+			e'nested-element-enum-val1'[uint(0)]
+			e'nested-element-enum-val2'[uint(1)]
+		}
+	}
+}

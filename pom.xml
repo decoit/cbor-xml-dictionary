@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>de.decoit.simu</groupId>
+    <artifactId>cbor-xml-dictionary</artifactId>
+	<version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+	
+	<organization>
+		<name>DECOIT GmbH</name>
+		<url>http://www.decoit.de/</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<id>trix</id>
+			<name>Thomas Rix</name>
+			<email>rix@decoit.de</email>
+			<organization>DECOIT GmbH</organization>
+			<organizationUrl>http://www.decoit.de/</organizationUrl>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>doodleproject-repo</id>
+			<name>DoodleProject Maven 2 Repository</name>
+			<url>http://doodleproject.sourceforge.net/maven2/release</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.4.201502262128</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>net.sf.doodleproject</groupId>
+				<artifactId>doxygen-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<configurationFile>${basedir}/src/doxygen/doxygen.config</configurationFile>
+					<executable>/usr/bin/doxygen</executable>
+					<workDirectory>${project.build.directory}/doxygen</workDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+    <dependencies>
+        <dependency>
+            <groupId>co.nstant.in</groupId>
+            <artifactId>cbor</artifactId>
+            <version>0.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.7</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.7</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.14.8</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>jsr250-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+</project>
