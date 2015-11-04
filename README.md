@@ -2,7 +2,7 @@
 Dictionary library to translate between XML and CBOR data items.
 
 ## Features
-This Java library allows you to define a dictionary that translates between XML and CBOR data items. Its main purpose is to reduce the size of XML structures when trasferring them over a network or storing them on disk. To achieve this goal it allows to map XML names, such as namespaces or element names, to simple CBOR data items. Depending on the target CBOR data type this may result in huge reductions in size. The mapping of which XML element translates into which CBOR data item is fully customizable using a simple dictionary description language. Short overview over the features:
+This Java library allows you to define a dictionary that translates between XML and [CBOR](http://www.cbor.io) data items. Its main purpose is to reduce the size of XML structures when trasferring them over a network or storing them on disk. To achieve this goal it allows to map XML names, such as namespaces or element names, to simple CBOR data items. Depending on the target CBOR data type this may result in huge reductions in size. The mapping of which XML element translates into which CBOR data item is fully customizable using a simple dictionary description language. Short overview over the features:
 
 * Forward lookup for translations from XML to CBOR
 * Reverse lookup for translations from CBOR to XML
@@ -16,8 +16,10 @@ The library features full support for forward and reverse lookup of translations
 
 Examples of how to use this dictionary to create CBOR data structures that represent XML documents may be found in our CBOR-IF-MAP projects:
 
-* CBOR-IF-MAP TNC Base
+* [CBOR-IF-MAP TNC Base](https://github.com/decoit/cbor-if-map-tnc-base)
 * CBOR-IF-MAP SIMU Extensions
+
+The library was developed during the [SIMU research](http://www.simu-project.de) project.
 
 ### Description language
 Dictionaries for usage with this library are defined by using a simple plain text description language. It allows both flat and hierarchical dictionaries at the same time, meaning you are free to build your dictionary structure the way your application can use it best. However some conventions must be followed to successfully import the dictionary into this library. Most of them are common sense since XML does not allow most those cases either.
