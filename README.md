@@ -17,7 +17,7 @@ The library features full support for forward and reverse lookup of translations
 Examples of how to use this dictionary to create CBOR data structures that represent XML documents may be found in our CBOR-IF-MAP projects:
 
 * [CBOR-IF-MAP TNC Base](https://github.com/decoit/cbor-if-map-tnc-base)
-* CBOR-IF-MAP SIMU Extensions
+* [CBOR-IF-MAP SIMU Extensions](https://github.com/decoit/cbor-if-map-simu-extensions)
 
 The library was developed during the [SIMU research](http://www.simu-project.de) project.
 
